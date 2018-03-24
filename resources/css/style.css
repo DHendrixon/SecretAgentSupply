@@ -1,54 +1,57 @@
 html {
   font-family: Helvetica;
   font-size: 18px;
-  color: white;
-}
-body {
-  display: flex;
-  justify-content: center;
 }
 
 .container {
   width: 960px;
-  display: flex;
-  flex-flow: column wrap;
+  margin: 0 auto;
 }
 
-/* logo banner */
+/* Logo banner */
 .logo {
   background-color: black;
+  color: white;
+  text-transform: uppercase;
   display: flex;
+  justify-content: center;
+}
+.logo .container {
+  display: flex;
+  align-items: center;
+  padding: .66rem .5rem;
 }
 .logo img {
   height: 1.5rem;
-  padding: .66rem .5rem;
-}
-.logo p {
-  height: 1.5rem;
-  padding: .66rem .5rem;
-  text-transform: uppercase;
+  padding-right: 1rem;
 }
 
 /* Main Banner */
 .mainbanner {
   height: 25rem;
+  background-image: url("../images/moto.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.mainbanner div {
+.banner-text {
+  position: relative;
+  top: 9rem;
+  width: 20rem;
+  padding: 2rem 3rem;
   background-color: black;
-  background-size: contain;
-  width: 25rem;
+  color: white;
   text-transform: uppercase;
-  margin-top: 9rem;
 }
-.mainbanner p {
-  padding: 2rem 0 .25rem 3rem;
-  font-weight: bold;
+.banner-text h4 {
   font-size: 1rem;
-}
-.mainbanner h1 {
-  padding: 0 0 2rem 3rem;
   font-weight: bold;
+  padding-bottom: .25rem;
+}
+
+.banner-text h1 {
   font-size: 2rem;
+  font-weight: bold;
 }
 
 /* Navigation */
@@ -59,16 +62,20 @@ nav {
   align-content: space-around;
   justify-content: space-around;
 }
-span {
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 0.75rem 0;
+}
+.mobile-nav {
+  display: none;
 }
 
 /* Main Content */
-
 .products {
   display: flex;
   justify-content: space-between;
-  flex-flow: row wrap;
   margin-top: 3rem;
 }
 .products img {
@@ -82,6 +89,7 @@ span {
   text-align: center;
 }
 .products div {
+
 }
 
 .locationhours {
@@ -101,7 +109,6 @@ span {
 }
 
 /* Footer */
-
 footer {
   margin-top: 4rem;
   height: 5rem;
